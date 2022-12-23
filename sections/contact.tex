@@ -1,0 +1,28 @@
+      % Contact Section
+      \ruleline{\textbf{Contact}}
+      \begin{tikzpicture}[every node/.style={inner sep=0pt, outer sep=0pt}]
+      \matrix [
+      column 1/.style={anchor=center,contactIcon},
+      column 2/.style={anchor=west,align=left,contactIcon},
+      column sep=5pt,
+      row sep=5pt] (contact) {
+      \node{\faMale};
+       & \node{Born on xx/xx/1690, Age ??};\\
+      \node{\faEnvelope};
+       & \node{\href{mailto:jacksparrow@yahoo.it}{jacksparrow@yahoo.it}};\\
+       \node{\faEnvelopeO};
+       & \node{\href{mailto:jacksparrow2@yahoo.it}{jacksparrow2@yahoo.it}};\\
+      \node{\faPhone};
+       & \node{+39 xxxxxxxxxx};\\
+      \node{\faMapMarker};
+      & \node{Tortuga Street 9 \\ ZIPCODE City (TG), Country};\\
+      \node{\faLinkedinSquare};
+      & \node{\href{your LinkedIn Link here}{jack-sparrow}};\\
+      \node{\aiResearchGateSquare};
+      & \node{\href{your Research Gate Link here}{Research Gate: Jack}};\\
+      \node{\aiOrcid};
+      & \node{\href{your Orcid Link here}{ORCID: xxxx-xxxx-xxxx-xxxx}};\\
+      \node{\faCar};
+      & \node{Car Available, Driving License B};\\
+       };
+      \end{tikzpicture}

@@ -1,0 +1,13 @@
+\begin{center}
+  \begin{tikzpicture}
+      \node[
+      circle,
+      minimum size=\cvPictureWidth,
+      path picture={
+      \node at (path picture bounding box.center){
+       \includegraphics[width=\cvPictureWidth]{Picture.jpg}
+       };
+       }]
+      {};
+  \end{tikzpicture}
+  \end{center}
