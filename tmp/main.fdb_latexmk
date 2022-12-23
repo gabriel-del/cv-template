@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1671657286 "main.tex" "tmp/main.pdf" "main" 1671657290
+["pdflatex"] 1671812973 "main.tex" "tmp/main.pdf" "main" 1671812977
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1650183167 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm" 1650183167 1528 abec98dbc43e172678c11b3b9031252a ""
@@ -250,9 +250,9 @@
   "PIC//Travels.png" 1671360013 34638 d273838297250373070ec30e3ff308e6 ""
   "PIC//google.png" 1671359967 110441 3e26049d9396f49912688a986b4027b8 ""
   "PIC//movie2.png" 1671359992 20894 c7daa4289f8e91f6fac4ec2d08e46778 ""
-  "main.tex" 1671657285 10747 9e92a113e2d4d7d97fd10dc3622e8460 ""
+  "main.tex" 1671812968 10742 28e27fd5c92be63c1de323c07f218d58 ""
   "preamble.sty" 1671360067 6528 b8f546b520421b0e521120641cdef95e ""
-  "tmp/main.aux" 1671657288 2842 8ab64000c013960e245131e379b8d06c "pdflatex"
+  "tmp/main.aux" 1671812974 2842 8ab64000c013960e245131e379b8d06c "pdflatex"
   "tmp/main.out" 0 -1 0 "pdflatex"
   (generated)
   "tmp/main.aux"
