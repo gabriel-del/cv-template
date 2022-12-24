@@ -1,7 +1,7 @@
 % we use the 'tcolorbox' package to create most of the formatting
 \usepackage[most]{tcolorbox}
 
-% we use 'geometry' package so that we can set the margins to be exactly we eant. In this case, 2.54 cm all around, to match those that MS word uses by default. Note that we set different margins at the top and bottom to take account of the custom header and footer that we are using. 
+% we use 'geometry' package so that we can set the margins to be exactly we eant. In this case, 2.54 cm all around, to match those that MS word uses by default. Note that we set different margins at the top and bottom to take account of the custom header and footer that we are using.
 \usepackage{geometry}
 \geometry{
     a4paper,
@@ -15,9 +15,9 @@
 \usepackage[TU]{fontenc}
 \usepackage{fourier-otf}
 
-% to have awesome icon 
-\usepackage{fontawesome} 
-%\usepackage{fontawesome5} 
+% to have awesome icon
+\usepackage{fontawesome}
+%\usepackage{fontawesome5}
 \usepackage{academicons}
 
 % advanced drawing
@@ -32,12 +32,12 @@
 \usetikzlibrary{shapes.misc,positioning}
 \usetikzlibrary{arrows}
 \usetikzlibrary{arrows.meta}
-\usetikzlibrary{backgrounds} 
+\usetikzlibrary{backgrounds}
 \usetikzlibrary{shadings}
-\usetikzlibrary{calendar} 
+\usetikzlibrary{calendar}
 \usetikzlibrary{er}
 \usetikzlibrary{patterns}
-\usetikzlibrary{shapes} 
+\usetikzlibrary{shapes}
 \usetikzlibrary{shapes.geometric}
 \usetikzlibrary{decorations}
 \usetikzlibrary{topaths}
@@ -85,7 +85,7 @@
 \node[draw=none, align=left](name) at (header) {%
 {\Huge \color{#5} #2 \textbf{#3} }%
 };%
-\node[draw=none, below](description) at (name.south) {\color{white}#4};% 
+\node[draw=none, below](description) at (name.south) {\color{white}#4};%
 }\vspace{-0.7cm}%
 }
 
@@ -127,12 +127,12 @@
     \adjustbox{valign=t}{\begin{minipage}{8.5cm}
         {\normalsize\bfseries #3}
         \hfill {\footnotesize \faMapMarker  ~ #5}
+        % \newline
+        % {\small\bfseries #4}
         \newline
-        {\small\bfseries #4}
-        \newline 
-        \small {\emph{#6}}
-        \newline 
-        \footnotesize {#7} 
+        \small {\emph{#4}}
+        \newline
+        \footnotesize {#6}
     \end{minipage}}
 }
 
@@ -150,7 +150,7 @@
         \newline
         %{\small \bfseries #3} \\
         \small {\emph{#4}} \\
-        \footnotesize {#5} 
+        \footnotesize {#5}
     \end{minipage}}
 }
 
@@ -195,7 +195,7 @@
 
 % Format of the section titles
 \titleformat{\section}{
-\bf \Large\raggedright}{}{0em}{}[\titlerule] % smallcaps, Large, continuous line - looks better if two columns, might look a bit too dramatic if just one ;) 
+\bf \Large\raggedright}{}{0em}{}[\titlerule] % smallcaps, Large, continuous line - looks better if two columns, might look a bit too dramatic if just one ;)
 \titlespacing{\section}{0pt}{12pt}{5pt} % Spacing around titles {<left spacing>}{<before spacing>}{<after spacing>}
 
 % Multiple Column Package
