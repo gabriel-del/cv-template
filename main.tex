@@ -6,7 +6,7 @@
 \begin{document}
 
 \sidebar{sideBarColor!25}
-\simpleheader{titleBackColor}{Jack}{Sparrow}{Captain | Pirate}{white}
+\simpleheader{titleBackColor}{Gabriel Del}{C. Barros}{Full-stack Developer}{white}
 
 % Start Minipages
 \vspace*{3.49cm}% start 8 cm from the top of the page}
@@ -21,40 +21,41 @@
 
     \end{minipage}} %
     \hfill
-%%%%% MAIN SECTION %%%%%%%%%%%%%%%%%%%%
+    %%%%% MAIN SECTION %%%%%%%%%%%%%%%%%%%%
     \adjustbox{valign=t}{\begin{minipage}{11.3cm}
         \vspace*{1cm}
         \input{sections/education.tex}
-        \input{sections/work-experience.tex}
-        \input{sections/publications.tex}
 
     \end{minipage}} %
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Second Page
-\newpage
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % Second Page
+    \newpage
 
-\sidebar{sideBarColor!25}
-\newpageheader{titleBackColor}{Jack}{Sparrow}{Pirate \faLightbulbO \hspace{1mm} Captain}{white}
+    \sidebar{sideBarColor!25}
+    \newpageheader{titleBackColor}{Jack}{Sparrow}{Pirate \faLightbulbO \hspace{1mm} Captain}{white}
 
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SIDEBAR %%%%%%%%%%%%%%%%%%%
-\adjustbox{valign=t}{%
-\begin{minipage}{7.3cm}
-\vspace*{0.4cm} % text starts 0.4cm under the top the header
-    \input{sections/skills.tex}
-    \input{sections/professional-skills.tex}
-    \input{sections/Interests.tex}
-    \input{sections/qr-code.tex}
-\end{minipage}
-}%
-\hfill
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% MAIN %%%%%%%%%%%%%%%%%%%%%%%%%
-\adjustbox{valign=t}{%
+    % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SIDEBAR %%%%%%%%%%%%%%%%%%%
+    \adjustbox{valign=t}{%
+    \begin{minipage}{7.3cm}
+        \vspace*{0.4cm} % text starts 0.4cm under the top the header
+        \input{sections/skills.tex}
+        \input{sections/professional-skills.tex}
+        \input{sections/Interests.tex}
+        \input{sections/qr-code.tex}
+    \end{minipage}
+    }%
+    \hfill
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% MAIN %%%%%%%%%%%%%%%%%%%%%%%%%
+    \adjustbox{valign=t}{%
 \begin{minipage}{11.3cm}
     \vspace*{0.4cm}
-    \input{sections/academic-reviews.tex}
+    \input{sections/work-experience.tex}
     \input{sections/technology-skills.tex}
     \input{sections/programming-languages.tex}
     \input{sections/certificates.tex}
 \end{minipage}}
 \end{document}
+
+% \input{sections/academic-reviews.tex}
+% \input{sections/publications.tex}

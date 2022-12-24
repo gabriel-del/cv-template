@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Arch Linux) (preloaded format=xelatex 2022.11.20)  23 DEC 2022 15:06
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Arch Linux) (preloaded format=xelatex 2022.11.20)  24 DEC 2022 12:58
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1430,8 +1430,8 @@ LaTeX Info: Redefining \nameref on input line 6.
 \openout4 = `main.out'.
 
 (./sections/picture.tex
-File: PIC//Picture.jpg Graphic file (type bmp)
-<PIC//Picture.jpg>
+File: PIC//profile.jpeg Graphic file (type bmp)
+<PIC//profile.jpeg>
 ) (./sections/contact.tex
 LaTeX Font Info:    Trying to load font information for TU+academicons on input
  line 21.
@@ -1464,31 +1464,70 @@ LaTeX Font Info:    Font shape `TU/ErewhonMath(3)/m/n' will be
 LaTeX Font Warning: Font shape `TU/FontAwesome(0)/b/n' undefined
 (Font)              using `TU/FontAwesome(0)/m/n' instead on input line 1.
 
-File: PIC//Ship.png Graphic file (type bmp)
-<PIC//Ship.png>
-File: PIC//Jolly-Roger.png Graphic file (type bmp)
-<PIC//Jolly-Roger.png>
-) (./sections/work-experience.tex) (./sections/publications.tex
-Missing character: There is no   (U+0020) in font [academicons.ttf]:!
+File: PIC//ufpe.jpg Graphic file (type bmp)
+<PIC//ufpe.jpg>
 
 Underfull \hbox (badness 10000) in paragraph at lines 3--3
 
  []
 
-Missing character: There is no   (U+0020) in font [academicons.ttf]:!
+File: PIC//ips.jpg Graphic file (type bmp)
+<PIC//ips.jpg>
 
 Underfull \hbox (badness 10000) in paragraph at lines 7--7
 
  []
 
+File: PIC//liege.jpg Graphic file (type bmp)
+<PIC//liege.jpg>
 
 Underfull \hbox (badness 10000) in paragraph at lines 11--11
-[]\TU/erewhon(0)/b/n/10 Conference
+
+ []
+
+File: PIC//liege.jpg Graphic file (type bmp)
+<PIC//liege.jpg>
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--15
+
+ []
+
+File: PIC//ufpe.jpg Graphic file (type bmp)
+<PIC//ufpe.jpg>
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--19
+
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 11--11
+Underfull \hbox (badness 10000) in paragraph at lines 19--19
+\TU/erewhon(0)/m/n/9 scientific research offered by the mathemathics olympics
+ []
 
+File: PIC//ufpe.jpg Graphic file (type bmp)
+<PIC//ufpe.jpg>
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--23
+
+ []
+
+File: PIC//ufpe.jpg Graphic file (type bmp)
+<PIC//ufpe.jpg>
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--27
+
+ []
+
+File: PIC//ufpe.jpg Graphic file (type bmp)
+<PIC//ufpe.jpg>
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+\TU/erewhon(0)/m/n/9 scientific research offered by the mathemathics olympics
  []
 
 ) [1
@@ -1533,12 +1572,7 @@ LaTeX Font Info:    Font shape `TU/ErewhonMath(3)/m/n' will be
 (Font)              scaled to size 5.99936pt on input line 8.
 LaTeX Font Info:    Font shape `TU/ErewhonMath(3)/m/n' will be
 (Font)              scaled to size 4.99947pt on input line 8.
-) (./sections/academic-reviews.tex) (./sections/technology-skills.tex
-LaTeX Font Info:    Font shape `TU/ErewhonMath(2)/m/n' will be
-(Font)              scaled to size 9.00096pt on input line 7.
-LaTeX Font Info:    Font shape `TU/ErewhonMath(3)/m/n' will be
-(Font)              scaled to size 8.99904pt on input line 7.
-
+) (./sections/work-experience.tex) (./sections/technology-skills.tex
 Underfull \hbox (badness 10000) in paragraph at lines 7--7
 
  []
@@ -1548,6 +1582,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--20
 
  []
 
+LaTeX Font Info:    Font shape `TU/ErewhonMath(2)/m/n' will be
+(Font)              scaled to size 9.00096pt on input line 27.
+LaTeX Font Info:    Font shape `TU/ErewhonMath(3)/m/n' will be
+(Font)              scaled to size 8.99904pt on input line 27.
 
 Underfull \hbox (badness 10000) in paragraph at lines 27--27
 
@@ -1572,11 +1610,11 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 43356 strings out of 476156
- 915475 string characters out of 5814962
- 1580516 words of memory out of 5000000
- 63324 multiletter control sequences out of 15000+600000
- 473715 words of font info for 101 fonts, out of 8000000 for 9000
+ 43352 strings out of 476156
+ 915226 string characters out of 5814962
+ 1571302 words of memory out of 5000000
+ 63326 multiletter control sequences out of 15000+600000
+ 473699 words of font info for 99 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  116i,18n,142p,1595b,1218s stack positions out of 5000i,500n,10000p,200000b,80000s
 
