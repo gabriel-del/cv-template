@@ -14,47 +14,50 @@
     \vspace*{1.2cm} % text starts 1cm under the top of the minipage
 
         \input{sections/picture.tex}
-        \ruleline{\textbf{About me}}
-        Olá eu me chamo Gabriel
+        \input{sections/about.tex}
+
         \input{sections/contact.tex}
+        \input{sections/programming.tex}
+        \input{sections/skills.tex}
         \input{sections/languages.tex}
         \input{sections/qr-code.tex}
+
 
     \end{minipage}} %
     \hfill
     %%%%% MAIN SECTION %%%%%%%%%%%%%%%%%%%%
     \adjustbox{valign=t}{\begin{minipage}{11.3cm}
         \vspace*{1cm}
+        \input{sections/work-experience.tex}
         \input{sections/education.tex}
 
     \end{minipage}} %
 
+
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % Second Page
-    \newpage
+    % \newpage
 
-    \sidebar{sideBarColor!25}
-    \newpageheader{titleBackColor}{Jack}{Sparrow}{Pirate \faLightbulbO \hspace{1mm} Captain}{white}
+    % \sidebar{sideBarColor!25}
+    % \newpageheader{titleBackColor}{Jack}{Sparrow}{Pirate \faLightbulbO \hspace{1mm} Captain}{white}
 
     % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SIDEBAR %%%%%%%%%%%%%%%%%%%
-    \adjustbox{valign=t}{%
-    \begin{minipage}{7.3cm}
-        \vspace*{0.4cm} % text starts 0.4cm under the top the header
-        \input{sections/skills.tex}
+    % \adjustbox{valign=t}{%
+    % \begin{minipage}{7.3cm}
+        % \vspace*{0.4cm} % text starts 0.4cm under the top the header
         % \input{sections/professional-skills.tex}
         % \input{sections/Interests.tex}
-    \end{minipage}
-    }%
-    \hfill
+    % \end{minipage}
+    % }%
+    % \hfill
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% MAIN %%%%%%%%%%%%%%%%%%%%%%%%%
-    \adjustbox{valign=t}{%
-\begin{minipage}{11.3cm}
-    \vspace*{0.4cm}
-    \input{sections/work-experience.tex}
-    \input{sections/technology-skills.tex}
-    \input{sections/programming-languages.tex}
-    \input{sections/certificates.tex}
-\end{minipage}}
+    % \adjustbox{valign=t}{%
+% \begin{minipage}{11.3cm}
+    % \vspace*{0.4cm}
+    % \input{sections/technology-skills.tex}
+    % \input{sections/programming-languages.tex}
+    % \input{sections/certificates.tex}
+% \end{minipage}}
 \end{document}
 
 % \input{sections/academic-reviews.tex}
