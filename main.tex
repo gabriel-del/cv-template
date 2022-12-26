@@ -1,7 +1,17 @@
+\newif\ifen
+\newif\ifpt
+\entrue
+
 % Compile with XeLateX
 \documentclass[11 pt,oneside,a4paper,titlepage]{article}
+\usepackage[english,portuges]{babel}
 \usepackage{preamble}
 \graphicspath{{PIC/}}
+
+\newcommand{\en}[1]{%
+  \ifen\selectlanguage{english}#1\fi}
+\newcommand{\pt}[1]{%
+  \ifpt\selectlanguage{portuges}#1\fi}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
