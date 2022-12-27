@@ -101,7 +101,7 @@
 \tikz[remember picture,overlay] {%
 \node[rectangle, fill=#1, anchor=north, minimum width=\paperwidth, minimum height=3.5cm](header) at (current page.north){};%
 \node[draw=none, align=left](name) at (header) {%
-{\Huge \color{#5} #2 \textbf{#3} }%
+{\Huge \color{#5} \textbf{#2} \textbf{#3} }%
 };%
 \node[draw=none, below](description) at (name.south) {\color{white}#4};%
 }\vspace{-0.7cm}%
