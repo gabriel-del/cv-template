@@ -8,7 +8,12 @@
 \usepackage{worldflags}
 \flagsdefault[width=3mm]
 \usepackage{preamble}
+\usepackage[dayofweek]{datetime}
+
 \graphicspath{{tmp/img}}
+
+
+\newdate{born}{22}{02}{1997}
 
 \newcommand{\en}[1]{%
   \ifen\selectlanguage{english}#1\fi}
@@ -39,6 +44,7 @@
     \adjustbox{valign=t}{\begin{minipage}{11.3cm}
         \vspace*{1cm}
         \input{etc/work-experience.tex}
+
         \input{etc/education.tex}
     \end{minipage}} %
 \end{document}
