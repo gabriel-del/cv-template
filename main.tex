@@ -26,38 +26,19 @@
 \vspace*{3.49cm}% start 8 cm from the top of the page}
     \adjustbox{valign=t}{\begin{minipage}{7.3cm} % large 7.4 cm from the top
     \vspace*{1.2cm} % text starts 1cm under the top of the minipage
-
-        \input{sections/picture.tex}
-        \ruleline{\textbf{\en{About 12345678}\pt{Sobre mim}}}
-        \en{\input{sections/en/about.tex}}
-        \pt{\input{sections/pt/about.tex}}
-        \\
-        \\\faMale\hspace{0.2cm}\en{Born on 02/22/1997}\pt{Nascido em 22/02/1997}
-        \ruleline{\textbf{\en{Skills}\pt{Apaixonado por}}}
-        \vspace*{-0.5cm}
-        \begin{center}
-            \en{\input{sections/en/skills.tex}}
-            \pt{\input{sections/pt/skills.tex}}
-        \end{center}
-        \input{sections/programming.tex}
-        \input{sections/languages.tex}
-        \input{sections/contact.tex}
-        \input{sections/qr-code.tex}
-
-
+        \input{etc/picture.tex}
+        \input{etc/about.tex}
+        \input{etc/skills.tex}
+        \input{etc/programming.tex}
+        \input{etc/languages.tex}
+        \input{etc/contact.tex}
+        \input{etc/qr-code.tex}
     \end{minipage}} %
     \hfill
     %%%%% MAIN SECTION %%%%%%%%%%%%%%%%%%%%
     \adjustbox{valign=t}{\begin{minipage}{11.3cm}
         \vspace*{1cm}
-        \section*{{\faSuitcase} \en{WORK EXPERIENCE}\pt{EXPERIÊNCIA PROFISSIONAL}}
-        \en{\input{sections/en/work-experience.tex}}
-        \pt{\input{sections/pt/work-experience.tex}}
-        \section*{{\faGraduationCap} \en{EDUCATION}\pt{Educação}}
-        \en{\input{sections/en/education.tex}}
-        \pt{\input{sections/pt/education.tex}}
+        \input{etc/work-experience.tex}
+        \input{etc/education.tex}
     \end{minipage}} %
-
-
-
 \end{document}
