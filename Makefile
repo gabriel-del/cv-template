@@ -4,7 +4,7 @@ LATEXOPT=--shell-escape #--output-directory=tmp
 NONSTOP=--interaction=batchmode
 
 LATEXMK=latexmk
-LATEXMKOPT=-pdf -auxdir=tmp -outdir=tmp
+LATEXMKOPT=-pdf -auxdir=tmp/log -outdir=tmp/log
 CONTINUOUS=-pvc
 
 MAIN=main
