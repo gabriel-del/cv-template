@@ -1,15 +1,5 @@
 \ruleline{\textbf{\en{Languages}\pt{Linguagens}}}
 \begin{tikzpicture}[every node/.style={inner sep=0pt, outer sep=0pt}]
-\matrix [
-column 1/.style={anchor=center,contactIcon},
-column 2/.style={anchor=west,align=left,contactIcon},
-column sep=5pt,
-row sep=5pt] (contact) {
-\node{\worldflag{BR}};
-& \en{\node{Portuguese - Native}}\pt{\node{Português - Nativo}};\\
-\node{\worldflag{US}};
-& \en{\node{English - Intermediate}}\pt{\node{Inglês - Intermediário}};\\
-\node{\worldflag{FR}};
-& \en{\node{French - Intermediate}}\pt{\node{Francês - Intermediário}};\\
-};
+\en{\input{sections/en/languages.tex}}
+\pt{\input{sections/pt/languages.tex}}
 \end{tikzpicture}
