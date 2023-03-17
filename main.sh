@@ -31,25 +31,37 @@ sed -i 's/}}/}/' xx02
 sed -i  '/}$/!  s/$/}/g ' xx02
 mkdir -p "$tmp/translated"
 mkdir -p "$tmp/translated/en"
-sed -n '1p' xx00 > "$tmp/translated/name.tex"
+sed -n '1p' xx00 > "$tmp/translated/en/title.tex"
 sed -n '1!p' xx00 > "$tmp/translated/contact.tex"
 sed -n '1!p' xx01 > "$tmp/translated/en/about.tex"
 sed -n '1!p' xx03 > "$tmp/translated/en/skills.tex"
 csplit -z xx02 '/\textbf{Experience}\|\textbf{Education}/' '{*}'
+N=$(wc -l < xx00)
 sed -i -n '1!p' xx00 
 sed -i -n '1!p' xx01 
-nl -w 3 -s == xx00 > "$tmp/translated/en/experience.tex"
-nl -w 3 -v 3 -s == xx01 > "$tmp/translated/en/education.tex"
+nl -s == xx00 > "$tmp/translated/en/experience.tex"
+nl -s == -v $N xx01 > "$tmp/translated/en/education.tex"
 }
 
 
 process_files(){
 cd "$tmp/translated"
-
-
+sed -i -e 's/[ ]*\(.*\)==\\textbf/\\section{resume-\1\.jpg}/' en/education.tex
+sed -i -e 's/[ ]*\(.*\)==\\textbf/\\section{resume-\1\.jpg}/' en/experience.tex
+sed -i -e 's/{/\n\\skills{/g ' en/skills.tex
+sed -i -e '/^$/d' en/skills.tex
+sed -i 's/^+55\(..\)\(.....\)\(....\)/{+55 (\1) \2-\3}/' contact.tex
+sed -i 's/^\\href{\(.*\)}{linkedin.com\/in\/\(.*\)}$/{\1}{\2}/' contact.tex
+sed -i 's/^\\url{https:\/\/github.com\/\(.*\)}$/{https:\/\/github.com\/\1}{\1}/' contact.tex
+sed -i '/^{/! s/\(.*\)/{\1}/' contact.tex
+sed -i '1s/{/\\contact{/' contact.tex
+sed -i ':x { N; s/\n//g ; bx }' contact.tex
+sed -i 's/\(.*\) \(.*\)/\\title{\1}{\2}/' en/title.tex
+awk -F '}{' '{print $2}' en/experience.tex | sed -n '1s/\(.*\)/{\1}/ p' >> en/title.tex 
+sed -i ':x { N; s/\n//g ; bx }' en/title.tex
 }
 
 # generate_tex
 # generate_info
 generate_files
-# process_files
+process_files
