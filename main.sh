@@ -46,9 +46,9 @@ nl -s == -v $N xx01 > "$tmp/translated/en/education.tex"
 
 process_files(){
 cd "$tmp/translated"
-sed -i -e 's/[ ]*\(.*\)==\\textbf/\\section{resume-\1\.jpg}/' en/education.tex
-sed -i -e 's/[ ]*\(.*\)==\\textbf/\\section{resume-\1\.jpg}/' en/experience.tex
-sed -i -e 's/{/\n\\skills{/g ' en/skills.tex
+sed -i -e 's/[ ]*\(.*\)==\\textbf/\\mysection{resume-\1\.jpg}/' en/education.tex
+sed -i -e 's/[ ]*\(.*\)==\\textbf/\\mysection{resume-\1\.jpg}/' en/experience.tex
+sed -i -e 's/{/\n\\skill{/g ' en/skills.tex
 sed -i -e '/^$/d' en/skills.tex
 sed -i 's/^+55\(..\)\(.....\)\(....\)/{+55 (\1) \2-\3}/' contact.tex
 sed -i 's/^\\href{\(.*\)}{linkedin.com\/in\/\(.*\)}$/{\1}{\2}/' contact.tex
@@ -62,13 +62,12 @@ sed -i ':x { N; s/\n//g ; bx }' en/title.tex
 }
 
 fix_image_names(){
-  # set -x
 cd "$tmp/html"
 for i in *.jpg ;do
 mv -v "$i" "$(echo $i | sed 's/^resume-[0-9]*_\([0-9]*\).jpg$/resume-\1\.jpg/')"
 done
-
 }
+
 # generate_tex
 # generate_info
 # generate_files
