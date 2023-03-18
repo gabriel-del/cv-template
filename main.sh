@@ -46,8 +46,8 @@ nl -s == -v $N xx01 > "$tmp/translated/en/education.tex"
 
 process_files(){
 cd "$tmp/translated"
-sed -i -e 's/[ ]*\(.*\)==\\textbf/\\mysection{resume-\1\.jpg}/' en/education.tex
-sed -i -e 's/[ ]*\(.*\)==\\textbf/\\mysection{resume-\1\.jpg}/' en/experience.tex
+sed -i -e 's/[ ]*\(.*\)==\\textbf/\\mysection{resume-\1\.jpg}{LOCATION}/' en/education.tex
+sed -i -e 's/[ ]*\(.*\)==\\textbf/\\mysection{resume-\1\.jpg}{LOCATION}/' en/experience.tex
 sed -i -e 's/{/\n\\skill{/g ' en/skills.tex
 sed -i -e '/^$/d' en/skills.tex
 sed -i 's/^+55\(..\)\(.....\)\(....\)/{+55 (\1) \2-\3}/' contact.tex
@@ -55,9 +55,10 @@ sed -i 's/^\\href{\(.*\)}{linkedin.com\/in\/\(.*\)}$/{\1}{\2}/' contact.tex
 sed -i 's/^\\url{https:\/\/github.com\/\(.*\)}$/{https:\/\/github.com\/\1}{\1}/' contact.tex
 sed -i '/^{/! s/\(.*\)/{\1}/' contact.tex
 sed -i '1s/{/\\contact{/' contact.tex
+echo -n "{LOCATION}" >> contact.tex
 sed -i ':x { N; s/\n//g ; bx }' contact.tex
-sed -i 's/\(.*\) \(.*\)/\\title{\1}{\2}/' en/title.tex
-awk -F '}{' '{print $2}' en/experience.tex | sed -n '1s/\(.*\)/{\1}/ p' >> en/title.tex 
+sed -i 's/\(.*\) \(.*\)/\\mytitle{\1}{\2}/' en/title.tex
+awk -F '}{' '{print $3}' en/experience.tex | sed -n '1s/\(.*\)/{\1}/ p' >> en/title.tex 
 sed -i ':x { N; s/\n//g ; bx }' en/title.tex
 }
 

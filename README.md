@@ -19,3 +19,7 @@ or
 
 sudo ln -s /usr/share/fontconfig/conf.avail/09-texlive-fonts.conf /etc/fonts/conf.d/09-texlive-fonts.conf
 sudo fc-cache && sudo mkfontscale && sudo mkfontdir
+
+
+Put LOCATION on education.tex and experience.tex
+Put  profile.jpeg

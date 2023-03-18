@@ -97,40 +97,23 @@
 }
 
 % CV tag for skills
-\newcommand{\contact}[6]{%
-% \matrix [
-%       column 1/.style={anchor=center,contactIcon},
-%       column 2/.style={anchor=west,align=left,contactIcon},
-%       column sep=5pt,
-%       row sep=5pt] (contact) {
-%       \node{\faGithubSquare};
-%       & \node{\href{#5}{#6}};\\
-%       \node{\faLinkedinSquare};
-%       & \node{\href{#3}{#4}};\\
-%       \node{\faEnvelope};
-%        & \node{\href{mailto:#1}{#1}};\\
-%       \node{\faPhone};
-%        & \node{#2};\\
-%       \node{\faMapMarker};
-%       & \node{Recife-PE, Brasil};\\
-%  }; 
+\newcommand{\mycontact}[6]{%
 \matrix [
       column 1/.style={anchor=center,contactIcon},
       column 2/.style={anchor=west,align=left,contactIcon},
       column sep=5pt,
       row sep=5pt] (contact) {
       \node{\faGithubSquare};
-      & \node{\href{https://github.com/gabriel-del}{gabriel-del}};\\
+       \& \node{\href{#5}{#6}};\\
       \node{\faLinkedinSquare};
-      & \node{\href{https://www.linkedin.com/in/gabriel-del/}{gabriel-del}};\\
+      \& \node{\href{#3}{#4}};\\
       \node{\faEnvelope};
-       & \node{\href{mailto:gabrieldelc.barros@gmail.com}{gabrieldelc.barros@gmail.com}};\\
+       \& \node{\href{mailto:#1}{#1}};\\
       \node{\faPhone};
-       & \node{+55 (81) 996007418};\\
+       \& \node{#2};\\
       \node{\faMapMarker};
-      & \node{Recife-PE, Brasil};\\
-      };
-
+      \& \node{Recife-PE, Brasil};\\
+ }; 
 }
 
 % top box with simple header
@@ -165,6 +148,12 @@
 \node[rectangle, fill=#1, anchor=north west, minimum width=8.6cm, minimum height=\paperheight](header) at (current page.north west){};%
 }\vspace{-0.7cm}%
 }
+
+% mytitle
+\newcommand{\mytitle}[3]{
+\simpleheader{titleBackColor}{#1}{#2}{#3}{white}
+}
+
 
 % Flag for Languages section and for all small personal icons
 \newcommand{\flag}[1]{\includegraphics[align=c, width=1em]{#1}}
