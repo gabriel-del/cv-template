@@ -23,3 +23,4 @@ sudo fc-cache && sudo mkfontscale && sudo mkfontdir
 
 Put LOCATION on education.tex and experience.tex
 Put  profile.jpeg
+update languages.tex and programming.tex
