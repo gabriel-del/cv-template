@@ -61,7 +61,16 @@ awk -F '}{' '{print $2}' en/experience.tex | sed -n '1s/\(.*\)/{\1}/ p' >> en/ti
 sed -i ':x { N; s/\n//g ; bx }' en/title.tex
 }
 
+fix_image_names(){
+  # set -x
+cd "$tmp/html"
+for i in *.jpg ;do
+mv -v "$i" "$(echo $i | sed 's/^resume-[0-9]*_\([0-9]*\).jpg$/resume-\1\.jpg/')"
+done
+
+}
 # generate_tex
 # generate_info
-generate_files
-process_files
+# generate_files
+# process_files
+# fix_image_names
