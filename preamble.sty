@@ -97,31 +97,27 @@
 }
 
 % CV tag for skills
-% \newcommand{\mycontact}[6]{%
-% \matrix [
-%       column 1/.style={anchor=center,contactIcon},
-%       column 2/.style={anchor=west,align=left,contactIcon},
-%       column sep=5pt,
-%       row sep=5pt] (contact) {
-%       \node{\faGithubSquare};
-%        \& \node{\href{#5}{#6}};\\
-%       \node{\faLinkedinSquare};
-%       \& \node{\href{#3}{#4}};\\
-%       \node{\faEnvelope};
-%        \& \node{\href{mailto:#1}{#1}};\\
-%       \node{\faPhone};
-%        \& \node{#2};\\
-%       \node{\faMapMarker};
-%       \& \node{Recife-PE, Brasil};\\
-%  }; 
-% }
-
-
-\newcommand{\mycontact}[0]{
-\begin{matrix}
-    1 & 2 & 3\\
-    a & b & c
-\end{matrix}}
+\newcommand{\mycontact}[7]{%
+\begin{tikzpicture}[every node/.style={inner sep=0pt, outer sep=0pt}]
+\matrix [
+      column 1/.style={anchor=center,contactIcon},
+      column 2/.style={anchor=west,align=left,contactIcon},
+      column sep=5pt,
+      row sep=5pt,
+      ampersand replacement=\&] (contact) {
+      \node{\faGithubSquare};
+      \& \node{\href{#5}{#6}};\\
+      \node{\faLinkedinSquare};
+      \& \node{\href{#3}{#4}};\\
+      \node{\faEnvelope};
+      \& \node{\href{mailto:#1}{#1}};\\
+      \node{\faPhone};
+      \& \node{#2};\\
+      \node{\faMapMarker};
+      \& \node{#7};\\
+ }; 
+\end{tikzpicture}
+}
 
 
 % top box with simple header
