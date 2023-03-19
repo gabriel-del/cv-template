@@ -119,12 +119,8 @@
 \end{tikzpicture}
 }
 
-\newcommand{\mylanguage}[2]{
-    \node{\worldflag{#1}};
-    \& \node{#2};\\
-}
 
-\newcommand{\mylanguages}[0]{
+\newcommand{\mylanguages}[6]{
     \begin{tikzpicture}[every node/.style={inner sep=0pt, outer sep=0pt}]
         \matrix [
         column 1/.style={anchor=center,contactIcon},
@@ -132,9 +128,12 @@
         column sep=5pt,
         row sep=5pt,
         ampersand replacement=\&] (contact) {
-\mylanguage{BR}{Portuguese - Native}
-\mylanguage{US}{English - Intermediate}
-\mylanguage{FR}{French - Intermediate}
+        \node{\worldflag{#1}};
+        \& \node{#2};\\
+        \node{\worldflag{#3}};
+        \& \node{#4};\\
+        \node{\worldflag{#5}};
+        \& \node{#6};\\
         };
         \end{tikzpicture}
 }
