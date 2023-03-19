@@ -7,6 +7,7 @@
 * texlive-pictures
 * texlive-latexextra
 * texlive-fontsextra
+translate-shell
 
 
 Fix latex fonts

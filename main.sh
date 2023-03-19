@@ -1,6 +1,7 @@
 #!/bin/bash
 
-tmp="$(pwd)/tmp"
+PWD=$(pwd)
+tmp="$PWD/tmp"
 
 generate_tex(){
 cd "$tmp"
@@ -69,8 +70,19 @@ mv -v "$i" "$(echo $i | sed 's/^resume-[0-9]*_\([0-9]*\).jpg$/resume-\1\.jpg/')"
 done
 }
 
+
+translate(){
+cd "$PWD/sections/en"
+mkdir -p ../pt
+for i in *
+ do trans -b -no-warn :pt-BR file://$i > ../pt/$i
+#  do echo $i
+ done
+
+}
 # generate_tex
 # generate_info
 # generate_files
 # process_files
 # fix_image_names
+translate
