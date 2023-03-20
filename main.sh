@@ -34,9 +34,8 @@ csplit -z info.tex '/\textbf{Summary}\|\textbf{Experience}\|\textbf{Skills}/' '{
 sed -i ':a;N;/\n\\text/! s/\n/}{/;ta;P;D' xx02
 sed -i 's/}}/}/' xx02
 sed -i  '/}$/!  s/$/}/g ' xx02
+sed -i 's/}{/ /4' xx02
 cp -vr "$pwd/etc/skel" "$tmp/translated"
-# mkdir -p "$tmp/translated"
-# mkdir -p "$tmp/translated/en"
 sed -n '1p' xx00 > "$tmp/translated/en/title.tex"
 sed -n '1!p' xx00 > "$tmp/translated/contact.tex"
 sed -n '1!p' xx01 > "$tmp/translated/en/about.tex"
@@ -52,8 +51,8 @@ nl -s == -v $N xx01 > "$tmp/translated/en/education.tex"
 
 process_files(){
 cd "$tmp/translated"
-sed -i -e 's/[ ]*\(.*\)==\\textbf/\\mysection{resume-\1\.jpg}{LOCATION}/' en/education.tex
-sed -i -e 's/[ ]*\(.*\)==\\textbf/\\mysection{resume-\1\.jpg}{LOCATION}/' en/experience.tex
+sed -i -e 's/[ ]*\(.*\)==\\textbf/\\myexperience{resume-\1\.jpg}{LOCATION}/' en/experience.tex
+sed -i -e 's/[ ]*\(.*\)==\\textbf/\\myeducation{resume-\1\.jpg}{LOCATION}/' en/education.tex
 sed -i -e 's/{/\n\\skill{/g ' en/skills.tex
 sed -i -e '/^$/d' en/skills.tex
 sed -i 's/^+55\(..\)\(.....\)\(....\)/{+55 (\1) \2-\3}/' contact.tex

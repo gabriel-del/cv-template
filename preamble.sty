@@ -182,7 +182,7 @@
 \newcommand{\flag}[1]{\includegraphics[align=c, width=1em]{#1}}
 
 % Command for Education and Works
-\newcommand{\mysection}[6]{ % input: years, logo, title, university, city, specialization, description
+\newcommand{\myexperience}[6]{ % input: years, logo, title, university, city, specialization, description
     \adjustbox{valign=t}{\begin{minipage}{2.9cm}
         \begin{center}
             {\footnotesize \bfseries #5} \\ %data
@@ -198,6 +198,29 @@
         % {\small\bfseries #4}
         \newline
         \small {\emph{#3}} %cargo - universidade
+        \newline
+        \footnotesize {#6} %descrição
+    \end{minipage}}
+
+    \vspace*{0.22cm}
+}
+% Command for Education and Works
+\newcommand{\myeducation}[6]{ % input: years, logo, title, university, city, specialization, description
+    \adjustbox{valign=t}{\begin{minipage}{2.9cm}
+        \begin{center}
+            {\footnotesize \bfseries #5} \\ %data
+            \vspace*{0.1cm}
+            \includegraphics[width=1.2cm]{#1} %logo
+        \end{center}
+    \end{minipage}}
+    \hfill \vline \hfill
+    \adjustbox{valign=t}{\begin{minipage}{7.5cm}
+        {\normalsize\bfseries #3} %empresa / title - tipo de formação
+        \hfill {\footnotesize \faMapMarker  ~ #2} %local
+        % \newline
+        % {\small\bfseries #4}
+        \newline
+        \small {\emph{#4}} %cargo - universidade
         \newline
         \footnotesize {#6} %descrição
     \end{minipage}}
