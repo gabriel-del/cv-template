@@ -27,6 +27,9 @@ config:
 translate: 
 	main.sh -t
 
+move: 
+	main.sh -m
+
 watch_pt:
 	$(LATEXMK) $(LATEXMKOPT) $(CONTINUOUS) $(NONSTOP) $(PT) $(MAIN) 
 

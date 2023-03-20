@@ -1,14 +1,18 @@
 #!/bin/bash
 
-PWD=$(pwd)
-tmp="$PWD/tmp"
+pwd=$(pwd)
+tmp="$pwd/tmp"
 
 generate_tex(){
-cd "$tmp"
+cd "$pwd"
+mkdir -pv "$tmp"
 resume=`ls Resume-*.pdf`
+profile=profile.jpeg
+cd "$tmp"
 mkdir -pv html tex
 cd html
-[[ -L resume.pdf ]] || ln -v -s "$tmp/$resume" resume.pdf
+[[ -L resume.pdf ]] || ln -v -s "$pwd/$resume" resume.pdf
+[[ -L profile.jpeg ]] || ln -v -s "$pwd/$profile" profile.jpeg
 echo > resume-html.html
 pdftohtml -s resume.pdf -nomerge
 pandoc resume-html.html -o "$tmp/tex/resume.tex"
@@ -30,8 +34,9 @@ csplit -z info.tex '/\textbf{Summary}\|\textbf{Experience}\|\textbf{Skills}/' '{
 sed -i ':a;N;/\n\\text/! s/\n/}{/;ta;P;D' xx02
 sed -i 's/}}/}/' xx02
 sed -i  '/}$/!  s/$/}/g ' xx02
-mkdir -p "$tmp/translated"
-mkdir -p "$tmp/translated/en"
+cp -vr "$pwd/etc/skel" "$tmp/translated"
+# mkdir -p "$tmp/translated"
+# mkdir -p "$tmp/translated/en"
 sed -n '1p' xx00 > "$tmp/translated/en/title.tex"
 sed -n '1!p' xx00 > "$tmp/translated/contact.tex"
 sed -n '1!p' xx01 > "$tmp/translated/en/about.tex"
@@ -55,12 +60,13 @@ sed -i 's/^+55\(..\)\(.....\)\(....\)/{+55 (\1) \2-\3}/' contact.tex
 sed -i 's/^\\href{\(.*\)}{linkedin.com\/in\/\(.*\)}$/{\1}{\2}/' contact.tex
 sed -i 's/^\\url{https:\/\/github.com\/\(.*\)}$/{https:\/\/github.com\/\1}{\1}/' contact.tex
 sed -i '/^{/! s/\(.*\)/{\1}/' contact.tex
-sed -i '1s/{/\\contact{/' contact.tex
+sed -i '1s/{/\\mycontact{/' contact.tex
 echo -n "{LOCATION}" >> contact.tex
 sed -i ':x { N; s/\n//g ; bx }' contact.tex
 sed -i 's/\(.*\) \(.*\)/\\mytitle{\1}{\2}/' en/title.tex
 awk -F '}{' '{print $3}' en/experience.tex | sed -n '1s/\(.*\)/{\1}/ p' >> en/title.tex 
 sed -i ':x { N; s/\n//g ; bx }' en/title.tex
+sed -i ':x { N; s/\n//g ; bx }' en/about.tex
 }
 
 fix_image_names(){
@@ -71,7 +77,7 @@ done
 }
 
 translate(){
-cd "$PWD/sections/en"
+cd "$pwd/sections/en"
 mkdir -p ../pt
 for i in *
  do trans -b -no-warn :pt-BR file://$i > ../pt/$i
@@ -83,7 +89,11 @@ help(){
   echo -e "-c: Generate files\n-t: translate"
 }
 
-while getopts ":ct" OPT; do
+move(){
+  cp -vr "$tmp/translated" "$pwd/sections" 
+}
+
+while getopts ":ctm" OPT; do
   case "${OPT}" in
     c)
       generate_tex
@@ -94,7 +104,10 @@ while getopts ":ct" OPT; do
     ;;
     t)
       translate
-        ;;
+    ;;
+    m)
+      move
+    ;;
     *)
       help
     ;;
