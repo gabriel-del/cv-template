@@ -36,10 +36,15 @@ Put your **resume-*.pdf** on the root directory, also a **profile.jpeg** picture
 
 `make move`
 
-Modify variable **LOCATION** on 
-**sections/contact.tex** , **sections/en/education** and **sections/en/experience.tex**
+Update
+* **sections/programming.tex**
+* **sections/qrcode.tex**  
+* **sections/en/languages.tex**
 
-Update **sections/programming.tex**, **sections/qrcode.tex**  and **sections/en/languages.tex**
+Modify variable **LOCATION** on 
+* **sections/contact.tex** 
+* **sections/en/education** 
+* **sections/en/experience.tex**
 
 Adjust anything else you find necessary on **sections/**
 
