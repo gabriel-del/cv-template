@@ -70,19 +70,33 @@ mv -v "$i" "$(echo $i | sed 's/^resume-[0-9]*_\([0-9]*\).jpg$/resume-\1\.jpg/')"
 done
 }
 
-
 translate(){
 cd "$PWD/sections/en"
 mkdir -p ../pt
 for i in *
  do trans -b -no-warn :pt-BR file://$i > ../pt/$i
-#  do echo $i
- done
+done
 
 }
-# generate_tex
-# generate_info
-# generate_files
-# process_files
-# fix_image_names
-translate
+
+help(){
+  echo -e "-c: Generate files\n-t: translate"
+}
+
+while getopts ":ct" OPT; do
+  case "${OPT}" in
+    c)
+      generate_tex
+      generate_info
+      generate_files
+      process_files
+      fix_image_names
+    ;;
+    t)
+      translate
+        ;;
+    *)
+      help
+    ;;
+    esac
+done
