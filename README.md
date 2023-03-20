@@ -30,22 +30,23 @@ sudo fc-cache && sudo mkfontscale && sudo mkfontdir
 
 # Usage
 
-Put your resume-*.pdf on the root directory, also a profile.jpeg picture
+Put your **resume-*.pdf** on the root directory, also a **profile.jpeg** picture.
 
 `make config`
 
 `make move`
 
-Modify LOCATION on contact.tex, aducation and experience
+Modify variable **LOCATION** on 
+**sections/contact.tex** , **sections/en/education** and **sections/en/experience.tex**
 
-Adjust anything else you find necessary on *secitions/*
+Update **sections/programming.tex**, **sections/qrcode.tex**  and **sections/en/languages.tex**
+
+Adjust anything else you find necessary on **sections/**
 
 `make translate`
 
-Adjust anything else you find necessary again on *sections/pt*
-
-update languages.tex and programming.tex
+Adjust anything else you find necessary again on **sections/pt/**
 
 `make`
 
-then you can find the .pdf's on *tmp/log/*
+Then you can find the .pdf's on **tmp/log/**.
