@@ -21,6 +21,12 @@ pt:
 en:
 	$(LATEXMK) $(LATEXMKOPT) $(EN) $(MAIN) 
 
+config:
+	main.sh -c
+
+translate: 
+	main.sh -t
+
 watch_pt:
 	$(LATEXMK) $(LATEXMKOPT) $(CONTINUOUS) $(NONSTOP) $(PT) $(MAIN) 
 
