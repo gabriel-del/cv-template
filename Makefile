@@ -4,23 +4,30 @@ LATEXOPT=--shell-escape #--output-directory=tmp
 NONSTOP=--interaction=batchmode
 
 LATEXMK=latexmk
-LATEXMKOPT=-pdf -auxdir=tmp/log -outdir=tmp/log
+LATEXMKOPT=-pdf -auxdir=tmp/log -outdir=tmp/log -pdfxe 
 CONTINUOUS=-pvc
+
+PT=-jobname=cv_pt -usepretex="\newif\ifen\newif\ifpt\pttrue"
+EN=-jobname=cv_en -usepretex="\newif\ifen\newif\ifpt\entrue"
 
 MAIN=main
 SOURCES=$(MAIN).tex Makefile 
 
-all:    $(MAIN).pdf
+all:  pt en
 
-.refresh: 
-	touch .refresh
+pt:
+	$(LATEXMK) $(LATEXMKOPT) $(PT) $(MAIN) 
 
-$(MAIN).pdf: $(MAIN).tex .refresh $(SOURCES) 
-	$(LATEXMK) $(LATEXMKOPT) $(CONTINUOUS) \
-	-pdflatex="$(LATEX) $(LATEXOPT) $(NONSTOP) %O %S" $(MAIN)
+en:
+	$(LATEXMK) $(LATEXMKOPT) $(EN) $(MAIN) 
+
+watch_pt:
+	$(LATEXMK) $(LATEXMKOPT) $(CONTINUOUS) $(NONSTOP) $(PT) $(MAIN) 
+
+watch_en:
+	$(LATEXMK) $(LATEXMKOPT) $(CONTINUOUS) $(NONSTOP) $(EN) $(MAIN) 
 
 force:
-	touch .refresh
 	rm $(MAIN).pdf
 	$(LATEXMK) $(LATEXMKOPT) $(CONTINUOUS) \
 	-pdflatex="$(LATEX) $(LATEXOPT) %O %S" $(MAIN)
@@ -31,9 +38,6 @@ clean:
 	rm -rf *~ *.tmp
 	rm -f *.bbl *.blg *.aux *.end *.fls *.log *.out *.fdb_latexmk
 	rm -rf tmp/*
-
-once:
-	$(LATEXMK) $(LATEXMKOPT) -pdflatex="$(LATEX) $(LATEXOPT) %O %S" $(MAIN)
 
 debug:
 	$(LATEX) $(LATEXOPT) $(MAIN)
