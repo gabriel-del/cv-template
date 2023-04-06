@@ -81,7 +81,14 @@ mkdir -p ../pt
 for i in *
  do trans -b -no-warn :pt-BR file://$i > ../pt/$i
 done
+}
 
+translate_fr(){
+cd "$pwd/sections/en"
+mkdir -pv ../fr
+for i in *
+ do echo $i && trans -b -no-warn :fr file://$i > ../fr/$i
+done
 }
 
 help(){
